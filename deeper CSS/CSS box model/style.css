@@ -1,0 +1,23 @@
+body{
+    margin:0px;
+}
+
+/* body has a default margin 8px */
+
+#product-overview {
+ background:#ff1b68;
+ padding:20px;
+ border-style:solid;
+ border-color:black;
+ border-width:5px;
+ margin:20px;
+}
+
+#plans h1{
+    color:blue;
+    font-family:'Ruge Boogie', cursive;;
+}
+
+h1 + p{
+    font-family: sans-serif;
+}

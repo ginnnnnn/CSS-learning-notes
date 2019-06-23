@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    margin-bottom: 16px;
+    background: #fa923f;
+    padding: 8px 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+a.active {
+    color:#521751;
+}
+/* combined selectors a.active anchor element which has .active class ,no space
+not useing oftenly */
+
+a:not(.active){
+    color:blue;
+}
+ /* pseudo :not() means select any anchor tag which is not having  .active class */
+/* a:not(p) is different to a :not(p) , a :not(p) with space means select everuthing 
+nest in anchor tag which are not p elements*/
+.main-section {
+    height: 800px;
+    border: 1px solid #ccc !important;
+    padding: 16px;
+}
+ /* !important force over writing ALL CSS ruls decoration */
+.hightlighted {
+    border: 2px solid #fa923f;
+    height:200px;
+}
+

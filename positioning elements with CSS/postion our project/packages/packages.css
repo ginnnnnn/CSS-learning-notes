@@ -1,0 +1,103 @@
+.background {
+    background:url('../images/plans-background.jpg');
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+/* z-index:auto is equal to 0 but it wont be applied if we dont set any position property*/
+/* and z-index is set to 0 for default */
+
+main {
+    padding-top:32px;
+}
+.packages {
+    margin:16px 0;
+    width:80%;
+    border:4px solid #0e4f1f;
+    border-left:none;
+    position:relative;
+    z-index:0;
+}
+.packages a {
+    text-decoration:none;
+    padding:32px;
+    display: block;
+    color:inherit;
+
+}
+.packages:hover,
+.packages:active {
+    box-shadow: 2px 2px 4px  rgba(0,0,0,0.5);
+    border-color:#ff5454 !important;
+}
+
+
+
+.packages__title {
+    font-weight:bold;
+    font-size:30px;
+
+}
+.packages__badge{
+    position:absolute;
+    margin:20px;
+    top:0;
+    right:0;
+    font-size:12px;
+    color:white;
+    background:#ff5454;
+    padding:8px;
+    z-index:10;
+}
+
+/* position:absolute it context the nearest parent element which has position property 
+set up, in this case we want it relative package element. we need to set package element
+to position: relative or fixed  */
+
+.packages__subtitle {
+    color:#979797;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.packages__info {
+    border:1px solid #014f1f;
+    background:white;
+    padding:16px;
+    color:#014f1f;
+    font-size:20px;
+}
+#plus {
+    background:rgba(213,235,220,0.95);
+}
+
+#free {
+    background:rgba(234,252,237,0.95);
+    float:right;
+    border-left:4px solid #0e4f1f;
+    border-right:none;
+}
+
+/* #free:hover,
+#free:active {
+    box-shadow: 2px 2px 4px  rgba(0,0,0,0.5);
+    border-left-color:#ff5454 ;
+}   or use !important on .packages:hover .packages:active*/
+
+.clearfix{
+    clear:both;
+}
+/* put a empty div right after a float elemwnt ans set clear property as value both; */
+
+#premium {
+    background:rgba(14,79,31,0.95);
+}
+
+#premium .packages__title {
+    color:white;
+}
+
+#premium .packages__subtitle {
+    color:#bbb;
+}

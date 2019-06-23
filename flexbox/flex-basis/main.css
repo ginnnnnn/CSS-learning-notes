@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+html {
+    background: #b3b3b3;
+    padding: 5px;
+}
+
+body {
+    background: #b3b3b3;
+    padding: 5px;
+    margin: 0;
+  }
+  
+.flex-container {
+    background: white;
+    padding: 10px;
+    border: 5px solid black;
+    display:flex;
+    height:800px;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    align-items: center; 
+    justify-content:flex-start;
+
+  }
+
+.item-1 {
+    background: #ff7300;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.item-2 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 250px;
+    font-size: 1.8rem;
+}
+
+.item-3 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    height: 250px;
+   
+}
+
+.item-4 {
+    background: #f5c096;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+   
+}
+
+.item-5 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+    flex-basis:300px;
+    flex-shrink:0;
+    /* flex-basis define the value by the main axis . for example here we flex-direction is row
+    so the main axis is impact to the width. if we set flex-basis:300px and float: shrink 0;
+    make it no shrink. the width will be overwritted to 300px  */
+    /* if we change the flex-direction to column , the height will be 300px cus the main axis 
+    switch to y axis */
+
+    /* flex in shorthand */
+    /* flex:0 1 auto //default value, grow shrink basis */
+}
+
+.item-6 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+    
+}

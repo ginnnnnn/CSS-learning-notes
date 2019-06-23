@@ -1,0 +1,75 @@
+.testimonial {
+    font-size: 1.2rem;
+    margin: 3rem 0;
+  }
+  
+  .testimonial__list {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .testimonial:first-of-type {
+    margin-top: 6rem;
+  }
+   /* :first-of-type ,select the first element with .testimonial class  */
+
+  .testimonial__image-container {
+    width: 60%;
+    /* position static or relative element it's width percentage is calculated by the 
+    closest block level container's  element content without padding */
+    max-width:580px;
+    /* max-width restrict the width goes unlimit zoom out ,opposite min-width */
+    display: inline-block;
+    vertical-align: middle;
+    box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+  }
+
+  .testimonial__image {
+    width: 100%;
+    vertical-align: top;
+  }
+  
+  .testimonial__info {
+    text-align: right;
+    padding: 0.9rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+  }
+  
+  #customer-2.testimonial {
+    text-align: right;
+  }
+  
+  #customer-2 .testimonial__info {
+    text-align: left;
+  }
+  
+  .testimonial__name {
+    margin: 0.2rem;
+    color: #ff5454;
+    font-size:2rem;
+  }
+  
+  .testimonial__subtitle {
+    margin: 0;
+    font-size: 1.1rem;
+    /* em is refer to the container rem is refer to root  */
+    color: #ccc;
+  }
+  
+  .testimonial__subtitle a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .testimonial__subtitle a:hover,
+  .testimonial__subtitle a:active {
+    color: #7a7a7a;
+  }
+  
+  .testimonial__text {
+    margin: 0.2rem;
+  }
+  
+  

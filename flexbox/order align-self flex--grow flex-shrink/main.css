@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+html {
+    background: #b3b3b3;
+    padding: 5px;
+}
+
+body {
+    background: #b3b3b3;
+    padding: 5px;
+    margin: 0;
+  }
+  
+.flex-container {
+    background: white;
+    padding: 10px;
+    border: 5px solid black;
+    display:flex;
+    height:800px;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    align-items: center; 
+    justify-content:flex-start;
+
+  }
+
+.item-1 {
+    background: #ff7300;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+}
+
+.item-2 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 250px;
+    font-size: 1.8rem;
+}
+
+.item-3 {
+    background: #ff9640;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    height: 250px;
+    /* align-self: flex-start; */
+    /* align define a single element align itself along the corss axis */
+    /* order:-2 */
+}
+
+.item-4 {
+    background: #f5c096;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    /* order:1; */
+    /* order propperty will compare to other element 0 is align ahead of 1 ,2 is behind 1
+    and -1 is ahead of 0and so on. the default value is 0 */
+    /* but is the flex-direction changes to row-reverse it behaviors oppsite */
+}
+
+.item-5 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+    /* flex-grow:1; */
+    /* grow property will extend the width with the spare space by the ratio of flex-grow addup
+    and divided .for example here set flex-grow:1 other set float: grow 4px;
+    when then screen increase and the spare space become avaiable .the width of this 
+    element will increase by 1 /(4+1)  * spare space the other one will be 4/5 *spare space */
+    /* but when the flex-wrap is wrap and the screen decrease and make the compare elements
+    to different line the second line element will occupied the whole width and the fisrt
+    element will take all the spare space width of the first line */
+}
+
+.item-6 {
+    background: #d3c0b1;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 10px;
+    width: 350px;
+    /* flex-shrink: 1 */
+    /* flex-shrink: 1 default 1 it act opposite way to flex-grow. it define how the element
+    shrink. by the ratio of the value add up. if the value is 0. it means the ele
+
+}

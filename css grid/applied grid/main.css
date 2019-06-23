@@ -1,0 +1,27 @@
+.container {
+    margin: 20px;
+    display:grid;
+    grid-template-columns:200px 2fr 20% 1fr;
+    /* grid-template-columns define how many column for the layout and the size */
+    /* 1fr means 1 fraction it make the remain space like 100% -200px -150px -20% and make it 
+    as one column */
+    /* if it sets 200px 2fr 20% 1fr the remain space will be 100% -200px -20% and divided by 3
+    then make 2part of it for the 2fr 1part for the 1fr element. */
+    grid-template-rows:3rem 5rem;
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+}

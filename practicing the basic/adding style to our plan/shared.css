@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.main-header {
+    width:100%;
+    background:#2ddf5c;
+    padding:8px 16px;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+}
+
+/* we have to set top:0 left:0 when we set position property to fixed,only if we have margin 
+in our parent element */
+.main-header > div {
+    display:inline-block;
+    vertical-align:middle;
+}
+/* vertical-align:middle set both on div and nav to make all on same level high */
+.main-header__brand {
+    color:#0e4f14;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:22px;
+}
+/* brand logo set up */
+.main-nav {
+    display:inline-block;
+    text-align: right;
+    width:calc(100% - 76px);
+    vertical-align:middle;
+}
+/* just set text-align:right; wont make li got to the very right,cus nav is inline-block,
+means it only take the width it needs.also text-align right make padding right to 0 */
+/* set nav and the div in header in the same line */
+
+/* for the width set up we should minus more px to fix the white space between div - nav element */
+
+.main-nav__items {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.main-nav__item {
+    display:inline-block;
+    margin:0 15px;
+}
+
+.main-nav__item  a {
+    color:#0e4f14;
+    text-decoration:none;
+    font-weight:bold;
+    padding: 3px 0;
+}
+/* inline ,inline-block,block . inline will next to each other with no top or buttom margin 
+and padding
+block, sit by each line and display with margin and padding. 
+inline-block is mixed both.it sit next to 
+each other and with margin and padding feature */
+
+/* pseudo class  hover and active*/
+
+/* .main-nav__item  a::after {
+    content:"(Link)";
+    color:red;
+}
+Pseudo element ::after */
+
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    color:white;
+    border-bottom:4px solid white;
+}
+/* Group rules by adding comma , */
+
+/* p::first-letter{
+    color:red;
+    border:1px solid black;
+    font-size:20px;
+}
+Pseudo elements ::first-letter */
+
+.main-nav__item--cta a {
+    color:white;
+    background:#ff1b68;
+    padding: 8px 16px;
+    border-radius:8px;
+}
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+    color:red;
+    background:white;
+    border:none;
+}
+
+
+.main-footer {
+    background:black;
+    padding:32px;
+    margin:48px 0;
+}
+.main-footer__links{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+
+.main-footer__link{
+    display:inline-block;
+    margin:0 16px;
+}
+.main-footer__link a{
+    text-decoration:none;
+    color:white;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active{
+    color:#ccc;    
+}
+/* BEM class naming main - nav element __ child item -- call to action state,
+main-nav__item--cta */
+
+.button {
+    color:white;
+    background:#0e4f1f;
+    font:inherit;
+    border:1.5px solid #0e4f1f;
+    padding:8px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+.button:hover,
+.button:active{
+    background:white;
+    color:#014f1f;
+}
+
+.button:focus {
+    outline: none;
+}
+
+/* style outline in :focus psuedo class,outline is not a 
+part of box mode
