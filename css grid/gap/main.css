@@ -1,0 +1,48 @@
+.container {
+    margin: 20px;
+    display:grid;
+    height:600px;
+    grid-template-columns:repeat(4,25% );
+    grid-template-rows:[row-1-start]3rem [row-1-end row-2-start] minmax(20px,200px) 10rem;
+    grid-column-gap:10px;
+    /* gap is like margin but it will be applied as a line thikeness and seperate
+    elements*/
+    grid-row-gap:20px;
+    /* shorthand gap row/column */
+    /* grid-gap:20px 10px */
+
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    /* grid shorthand set */
+    grid-column:1 /-1;
+    /* grid-row-start:row-2-start; */
+    /* using our named line here without [] */
+    /* grid-row-end:span 1; */
+    grid-row:row-2-start/span 1;
+    z-index:2
+}
+
+.el3 {
+    background: rgba(28, 32, 28, 0.5);
+    /* grid-column-start:2;
+    grid-column-end:span 3;
+    grid-row-start:1;
+    grid-row-end:3; */
+    /* grid area shorthand for row and column
+    itshould be row-start/column-start/row-end/column-end*/
+    grid-area:1/2/3/span 3;
+
+}
+ /* el3 created after el2 so when the position changes and become overlap
+ el3 will be on top of el2 */
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+}

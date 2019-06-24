@@ -1,0 +1,31 @@
+.container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,10rem);
+    grid-template-rows:20rem;
+    justify-content: center;
+    grid-gap: 1.5rem;
+    grid-auto-rows:minmax(8rem , auto);
+    grid-auto-flow:row dense;
+    /* dense will let other element jump up ti fill the empty space ,but it is 
+    easy to make erro view ,cus it break the DOM order*/
+  }
+
+.quote {
+  border: 1px solid #fa923f;
+  background: #ffbd87;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.quote:nth-of-type(2){
+ /* select the second element class name quote and has same parent */
+  grid-column:span 2;
+}
+
+.quote--featured {
+  border: #ff4213;
+  background: #ff9f87;
+  grid-column: span 2;
+}

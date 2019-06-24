@@ -1,0 +1,46 @@
+.container {
+    margin: 20px;
+    display:grid;
+    height:800px;
+    width:800px;
+    grid-template-columns:repeat(4,20% );
+    grid-template-rows:[row-1-start]3rem [row-1-end row-2-start] minmax(20px,200px) 10rem;
+    grid-gap:20px 10px;
+    grid-template-areas:"header header header header "
+                        ". . main main"
+                        "footer footer footer footer";
+    justify-items: stretch;
+    align-items: stretch;                 
+    justify-content: center;
+    /* this is usually when the container is bigger set than content
+    and how we set the position of the entire content  default start*/
+    align-content:center;
+    /* x axis for justify y axis for align */
+    /* item for grid elements content for the entire grid */
+    background:#999;
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+    grid-area:header;
+    /* name it header and it will take over header area we set */
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    grid-area:main;
+    z-index:2;
+    /* this is for adjust single element */
+    align-self:center;
+    justify-self:center;
+}
+
+.el3 {
+    background: rgba(28, 32, 28, 0.5);
+
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+    grid-area:footer;
+}

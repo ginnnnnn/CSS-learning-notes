@@ -1,0 +1,36 @@
+.container {
+    margin: 20px;
+    display: grid;
+    /* grid-template-columns: repeat(2,15rem); */
+    grid-template-columns: repeat(auto-fit,10rem);
+  /* auto-fit when we dont have enough items and it also will center the content */
+    /* grid-template-columns: repeat(auto-fill,10rem); */
+    /* auto-fill will reponsive fill as many as possible columns in the container
+    set max-width can limit the column */
+    grid-template-rows:20rem;
+    /* the first row explicit set 2 columns and 1 row 
+    all other child element will be applied as auto rows or auto columns*/
+    justify-content: center;
+    grid-gap: 1.5rem;
+    /* grid-auto-row:auto is default */
+    /* grid auto create rows for overflow elements */
+    grid-auto-rows:minmax(8rem , auto);
+    /* this created row by height ??rem */
+    grid-auto-flow:row;
+    /* this define how the new element will be set default is a new row */
+    /* grid-auto-columns:15rem; */
+  }
+
+.quote {
+  border: 1px solid #fa923f;
+  background: #ffbd87;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.quote--featured {
+  border: #ff4213;
+  background: #ff9f87;
+  grid-column: span 2;
+}

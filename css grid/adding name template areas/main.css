@@ -1,0 +1,38 @@
+.container {
+    margin: 20px;
+    display:grid;
+    height:800px;
+    grid-template-columns:repeat(4,25% );
+    grid-template-rows:[row-1-start]3rem [row-1-end row-2-start] minmax(20px,200px) 10rem;
+    grid-gap:20px 10px;
+    /* grid-template-areas is very cool features we define the area names
+    and position by columns and rows that we set and map it with "name"
+    here we have set 4 columns and 3 rows . it makes 12 cells */
+    /* . means no set area it takes 1 cells for others elements take 1 cell aswell */
+    grid-template-areas:"header header header header "
+                        ". . main main"
+                        "footer footer footer footer";
+   
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+    grid-area:header;
+    /* name it header and it will take over header area we set */
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    grid-area:main;
+    z-index:2
+}
+
+.el3 {
+    background: rgba(28, 32, 28, 0.5);
+
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+    grid-area:footer;
+}

@@ -1,0 +1,41 @@
+.container {
+    margin: 20px;
+    display:grid;
+    height:800px;
+    grid-template-columns:[hd-start]repeat(4,[col-start] 25% [col-end])[hd-end];
+    /* by setting line name at repeat value it will automatically create
+    col-start 1 column col-end 1 col-start 2 column col-end 2... */
+    grid-template-rows:[hd-start row-1-start]3rem [hd-end row-1-end row-2-start] minmax(20px,200px) 10rem;
+    grid-gap:20px 10px;
+    grid-template-areas:"header header header header "
+                        ". . main main"
+                        "footer footer footer footer";
+
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+    /* name it header and it will take over header area we set */
+    grid-column:col-start 1 /col-end 1;
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    z-index:2;
+    grid-column:col-start 2 /col-end 2;
+
+}
+
+.el3 {
+    background: rgba(28, 32, 28, 0.5);
+    /* grid-column:col-start 3 /col-end 3; */
+    grid-area:hd;
+    /* hd will take name [hd-start][hd-end] mark out area */
+
+
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+    grid-column:col-start 4 /col-end 4;
+}
