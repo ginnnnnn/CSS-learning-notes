@@ -1,0 +1,109 @@
+@import "_variables.scss";
+//import as partials
+
+@import "typography.scss";
+
+html {
+  font-size: 94.75%;
+  @media (min-width: 40rem) {
+      font-size: 125%;
+    }
+}
+//nest media query in element itself
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  // flex-direction: column;
+  // flex-wrap: nowrap;
+  // nested property
+  flex: {
+    direction:column;
+    wrap:nowrap;
+  }
+  align-items: center;
+  padding: $padding-default;
+  box-sizing: border-box;
+  @media (min-width: 40rem) {
+      padding: $padding-default;
+    }
+}
+//sass inheritance ,first create a class contain property and value in common 
+//ex introduction and detail and add @extend classname nest in;
+.sass-section {
+  border: $border-default;
+  background:lighten(map-get($colors,main),73%);
+  text-align: center;
+  width: 90%;
+  @media (min-width: 40rem) {
+    width: 30rem;
+  }
+}
+.sass-introduction {
+  @extend .sass-section;
+  padding: $size-default *2;
+  box: {
+    shadow: $size-tiny $size-tiny $size-tiny/2 #ccc;
+    sizing: border-box;
+  }
+}
+
+.sass-introduction {
+  p { margin: 0;}
+}
+
+.sass-details {
+  @extend .sass-section;
+  padding: $size-default;
+  margin: $size-default*2 0;
+  box-sizing: border-box;
+ 
+}
+
+.section-header {
+  border-bottom: $border-default;
+  h1 {
+    margin: 0 0 $size-default 0;
+  }
+}
+
+
+.documentation-links {
+  list-style: none;
+  margin: $size-default 0 0 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex: {
+    direction:column;
+  }
+  li {
+    margin: $size-tiny 0;
+    background: white;
+  }
+
+  .documentation-link {
+    text-decoration: none;
+    color: map-get($colors,main);
+    display: block;
+    padding: $size-tiny;
+    border: $border-default;
+  }
+
+  .documentation-link:hover,
+  .documentation-link:active {
+  color: white;
+  background: map-get($colors,secondary);
+  border-color: map-get($colors,secondary);
+}
+
+}
+

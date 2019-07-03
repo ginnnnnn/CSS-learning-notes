@@ -1,0 +1,38 @@
+.container{
+    position: relative;;
+    margin:150px auto;
+    border:1px solid black;
+    width:200px;
+    height:200px;
+    perspective:1000px;
+    perspective-origin:500px;
+    transform:rotateY(130deg);
+    /* transform-style:flat; default */
+    transform-style:preserve-3d
+}
+.box1{
+    position: absolute;
+    background: red;
+    width:100%;
+    height:100%;
+    color:white;
+    font-family:sans-serif;
+    text-align: center;
+    transform: rotateX(30deg) rotateY(80deg) ;
+    /* rotateX() rotateY(), more use in 3D design rotateZ() is oftenly use in 2D design*/
+    z-index: 1;
+    /* backface-visibility: hidden */
+    backface-visibility: visible;
+}
+
+.box2{
+    position: absolute;
+    background: blue;
+    width:100%;
+    height:100%;
+    color:white;
+    font-family:sans-serif;
+    text-align: center;
+    transform: translateX(1rem) translateZ(10rem)
+
+}

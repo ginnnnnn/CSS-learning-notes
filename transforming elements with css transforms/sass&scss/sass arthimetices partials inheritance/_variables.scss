@@ -1,0 +1,14 @@
+// $main-color:#521751;
+// sass variable use with $name:value
+//var map
+$colors:(main:#521751,secondary:#fa923f);
+//use var map by map-get($name,variable)
+
+$size-default:1rem;
+//set global size
+$size-tiny:0.2rem;
+//now we can adjust the global size to change entire page
+
+//var as list
+$border-default:$size-tiny/4 solid map-get($colors,main);
+$padding-default:$size-default*3 0;
